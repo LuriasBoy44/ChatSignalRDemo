@@ -1,4 +1,6 @@
 # ChatSignalRDemo
-chat con signalR C#
+Chat con signalR C#
 
-Agreagr chat/index
+No usar con InternetExplorer no le da el ancho es muy ineficiente
+
+
