@@ -52,7 +52,7 @@ namespace ChatRoomsProyect
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Chat}/{action=Index}/{id?}");
                 endpoints.MapHub<ChatHub>("/chat");
             });
         }
