@@ -10,7 +10,6 @@
     </div>
 </div>
 
-
 <div class="row">
     <div class="col-6">
         <div id="messages"></div>
@@ -35,26 +34,27 @@
         let user = document.getElementById("user").value;
         let message = document.getElementById("message").value;
 
-
         connection.invoke("SendMessage", user, room, message).catch((err) => console.error(err.toString()));
-
 
         document.getElementById("message").value = "";
         document.getElementById("message").focus();
 
-
-        connection.on("ReceiveMessage", (user, message) => {
-
-            var message = "<div><b>" + user + " dijo: </b> " + message + "</div>";
-
-
-            document.getElementById("messages").innerHTML =
-                message + document.getElementById("messages").innerHTML;
-        });
-
-        
-
-        event.preventDefault();
+        event.preventDefault();   
     })
 
+     connection.on("ReceiveMessage", (user, message) => {
+
+     message = "<div><b>" + user + " dijo: </b> " + message + "</div>";
+
+     document.getElementById("messages").innerHTML =
+            message + document.getElementById("messages").innerHTML;
+     });
+
+    connection.on("ShowWho", (message) => {
+
+        message = "<div><b>" + message + "</b></div>";
+
+        document.getElementById("notifications").innerHTML =
+            message + document.getElementById("notifications").innerHTML;
+    });
 </script>

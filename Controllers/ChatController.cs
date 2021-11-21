@@ -8,11 +8,14 @@ namespace ChatRoomsProyect.Controllers
     {
         public static Dictionary<int, String> Rooms = new Dictionary<int, string>() {
 
-            { 1,"Sala 1"},
-            { 2,"Sala Dos"},
-            { 3,"Sala III"},
-            { 4,"sAlA kUaTr0"},
-            { 5,"Salon 5" }
+            { 1,"Salón 1"},
+            { 2,"Salón 2"},
+            { 3,"Salón 3"},
+            { 4,"Salón 4"},
+            { 5,"Salón 5"},
+            { 6,"Salón 6"},
+            { 7,"Salón 7"},
+            { 8,"Salón 6"},
         };
         public IActionResult Index()
         {
